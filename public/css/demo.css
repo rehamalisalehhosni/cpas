@@ -1,0 +1,45 @@
+/* All styles created for demo purposes only, you may not need this for your project */
+.demo-button button {
+  margin-bottom: 5px;
+}
+
+.demo-icons li {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.demo-icons .lnr,
+.demo-icons .fa {
+  font-size: 28px;
+}
+.demo-icons .cssclass {
+  display: block;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+body{
+  overflow-x: hidden;
+}
+.logo{
+  max-height: 120px;
+  margin: 0 auto;
+}
+.sidebar .brand{
+  padding: 20px !important;
+}
+.img_view{
+  width: 60px !important;
+  height: 60px !important;
+}
+.imgs,.lis{
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+.imgs i,.lis i{
+  position: absolute;
+  color: red;
+  display: inline-flex;
+  top: 53%;
+  left: 60%;
+  font-size: 22px;
+}

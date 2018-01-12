@@ -1,0 +1,11 @@
+body{
+  background: url('../img/bg.png') ;
+}html #wrapper .main{
+  width:100%;
+}html #wrapper .main ,#wrapper .navbar-default{
+  background-color: inherit;
+}
+.logo{
+  margin: 0 auto;
+  padding-top: 10px;
+}
