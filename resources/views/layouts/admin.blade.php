@@ -36,8 +36,12 @@
             <li><a href="{{ route('users.index') }}" class=""><i class="lnr lnr-users"></i> <span>Users</span></a></li>
             <li><a href="{{ route('roles.index') }}" class=""><i class="lnr lnr-chart-bars"></i> <span>Roles</span></a></li>
             <li><a href="{{ route('news.index') }}" class=""><i class="lnr lnr-cog"></i> <span>News</span></a></li>
+            <li><a href="{{ route('services.index') }}" class=""><i class="lnr lnr-cog"></i> <span>Services</span></a></li>
             <li><a href="{{ route('projectCategory.index') }}" class=""><i class="lnr lnr-cog"></i> <span>project Category</span></a></li>
             <li><a href="{{ route('projects.index') }}" class=""><i class="lnr lnr-cog"></i> <span>Projects</span></a></li>
+            <li><a href="{{ route('cpasBooks.index') }}" class=""><i class="lnr lnr-cog"></i> <span>CPAS Books</span></a></li>
+            <li><a href="{{ route('alambnaaa.index') }}" class=""><i class="lnr lnr-cog"></i> <span>Alambnaaa</span></a></li>
+            <li><a href="{{ route('alambnaaaIndexing.index') }}" class=""><i class="lnr lnr-cog"></i> <span>Alambnaaa Indexing</span></a></li>
             <li><a href="notifications.html" class=""><i class="lnr lnr-alarm"></i> <span>Notifications</span></a></li>
             <li>
               <a href="#subPages" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>Pages</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
