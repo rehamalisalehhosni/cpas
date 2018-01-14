@@ -47,6 +47,12 @@
 			{!! Form::text('long', null, array('placeholder' => 'longitude','class' => 'form-control  ')) !!}
 		</div>
 	</div>
+	<div class="col-xs-12 col-sm-12 col-md-12">
+		<div class="form-group">
+			<strong> Projects Category :</strong>
+			{!! Form::select('projects_category_id', $projectsCategory, null,['class' => 'form-control']) !!}
+		</div>
+	</div>
 	@if ($item->main_image)
 	<div class="col-xs-12 col-sm-12 col-md-12">
 		<div class="form-group">

@@ -4,10 +4,10 @@
 <div class="row">
 	<div class="col-lg-12 margin-tb">
 		<div class="pull-left">
-			<h2>Create New Projects</h2>
+			<h2>Create New Seniors</h2>
 		</div>
 		<div class="pull-right">
-			<a class="btn btn-primary" href="{{ route('projects.index') }}"> Back</a>
+			<a class="btn btn-primary" href="{{ route('services.index') }}"> Back</a>
 		</div>
 	</div>
 </div>
@@ -21,12 +21,37 @@
 	</ul>
 </div>
 @endif
-{!! Form::open(array('route' => 'projects.store','method'=>'POST','novalidate' => 'novalidate','files' => true)) !!}
+{!! Form::open(array('route' => 'seniors.store','method'=>'POST','novalidate' => 'novalidate','files' => true)) !!}
 <div class="row">
+
 	<div class="col-xs-12 col-sm-12 col-md-12">
 		<div class="form-group">
 			<strong>Title:</strong>
 			{!! Form::text('title', null, array('placeholder' => 'Title','class' => 'form-control')) !!}
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-12">
+		<div class="form-group">
+			<strong>Category:</strong>
+			{!! Form::text('category', null, array('placeholder' => 'Category','class' => 'form-control')) !!}
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-12">
+		<div class="form-group">
+			<strong>General Experience:</strong>
+			{!! Form::text('general_experience', null, array('placeholder' => 'General Experience','class' => 'form-control')) !!}
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-12">
+		<div class="form-group">
+			<strong>Experience in cpas:</strong>
+			{!! Form::text('experience_cpas', null, array('placeholder' => 'Experience in cpas','class' => 'form-control')) !!}
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-12">
+		<div class="form-group">
+			<strong>Sort:</strong>
+			{!! Form::text('sort', null, array('placeholder' => 'Sort','class' => 'form-control')) !!}
 		</div>
 	</div>
 	<div class="col-xs-12 col-sm-12 col-md-12">
@@ -36,33 +61,9 @@
 		</div>
 	</div>
 	<div class="col-xs-12 col-sm-12 col-md-12">
-		<div class="form-group ">
-			<strong>latitude:</strong>
-			{!! Form::text('lat', null, array('placeholder' => 'Latitude','class' => 'form-control  ')) !!}
-		</div>
-	</div>
-	<div class="col-xs-12 col-sm-12 col-md-12">
-		<div class="form-group ">
-			<strong>longitude:</strong>
-			{!! Form::text('long', null, array('placeholder' => 'longitude','class' => 'form-control  ')) !!}
-		</div>
-	</div>
-	<div class="col-xs-12 col-sm-12 col-md-12">
 		<div class="form-group">
-			<strong> Projects Category :</strong>
-			{!! Form::select('projects_category_id', $projectsCategory, null,['class' => 'form-control']) !!}
-		</div>
-	</div>
-	<div class="col-xs-12 col-sm-12 col-md-12">
-		<div class="form-group">
-			<strong>Main Image :</strong>
-			{!! Form::file('main_image', null, array('placeholder' => 'Main Image','class' => 'form-control')) !!}
-		</div>
-	</div>
-	<div class="col-xs-12 col-sm-12 col-md-12">
-		<div class="form-group">
-			<strong> Images :</strong>
-			{!! Form::file('images[]',  ['multiple' => 'multiple'], array('placeholder' => 'images','class' => 'form-control')) !!}
+			<strong> Image :</strong>
+			{!! Form::file('image', null, array('placeholder' => ' Image','class' => 'form-control')) !!}
 		</div>
 	</div>
 	<div class="col-xs-12 col-sm-12 col-md-12 text-center">

@@ -22,6 +22,7 @@
 	<tr>
 		<th>No</th>
 		<th>Title</th>
+		<th>Category</th>
 		<th>Main Image</th>
 		<th width="280px">Action</th>
 	</tr>
@@ -29,6 +30,7 @@
 	<tr>
 		<td>{{ ++$i }}</td>
 		<td>{{ $item->title }}</td>
+		<td>{{ $item->projectsCategory->title }}</td>
 		<td><img src="{{url('/Uploads/projects/'. $item->main_image)}}" alt="" class="img-thumbnail img_view" /></td>
 		<td>
 			<a class="btn btn-info" href="{{ route('projects.show',$item->projects_id) }}">Show</a>

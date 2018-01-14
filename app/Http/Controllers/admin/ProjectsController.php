@@ -49,6 +49,7 @@ class ProjectsController extends Controller
   {
     $this->validate($request, [
       'title' => 'required',
+      'projects_category_id' => 'required',
       'description' => 'required',
       'lat' => 'required',
       'long' => 'required',
@@ -58,6 +59,7 @@ class ProjectsController extends Controller
     $projects->title = $request->title;
     $projects->lat = $request->lat;
     $projects->long = $request->long;
+    $projects->projects_category_id = $request->projects_category_id;
     $request->description=str_replace('../', url('/'), $request->description);
     $projects->description = $request->description;
     if($file = $request->hasFile('main_image')) {
@@ -120,7 +122,9 @@ class ProjectsController extends Controller
   public function edit($id)
   {
     $item = Projects::find($id);
-    return view('Projects.edit',compact('item'));
+    $projectsCategory= ProjectsCategory::lists('title','projects_category_id');
+
+    return view('Projects.edit',compact('item','projectsCategory'));
 
   }
 
@@ -136,6 +140,7 @@ class ProjectsController extends Controller
     //
     $this->validate($request, [
       'title' => 'required',
+      'projects_category_id' => 'required',
       'description' => 'required',
       'lat' => 'required',
       'long' => 'required',
@@ -146,6 +151,7 @@ class ProjectsController extends Controller
     $projects->title = $request->title;
     $projects->long = $request->long;
     $projects->lat = $request->lat;
+    $projects->projects_category_id = $request->projects_category_id;
     $request->description=str_replace('../', url('/'), $request->description);
     $projects->description = $request->description;
     if($file = $request->hasFile('main_image')) {

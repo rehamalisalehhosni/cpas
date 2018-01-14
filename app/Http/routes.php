@@ -85,6 +85,62 @@ Route::group(['middleware' => ['auth']], function() {
 	Route::get('cpasBooks/{id}/edit', ['as' => 'cpasBooks.edit', 'uses' => 'admin\CpasBooksController@edit', 'middleware' => ['permission:cpasBooks-edit']]);
 	Route::patch('cpasBooks/{id}', ['as' => 'cpasBooks.update', 'uses' => 'admin\CpasBooksController@update', 'middleware' => ['permission:cpasBooks-edit']]);
 	Route::delete('cpasBooks/{id}', ['as' => 'cpasBooks.destroy', 'uses' => 'admin\CpasBooksController@destroy', 'middleware' => ['permission:cpasBooks-delete']]);
+	/////////Cpas Profile ///////////
+	Route::get('cpasProfile', ['as' => 'cpasProfile.index', 'uses' => 'admin\CpasProfileController@index', 'middleware' => ['permission:cpasProfile-list|cpasProfile-create|cpasProfile-edit|cpasProfile-delete']]);
+	Route::get('cpasProfile/create', ['as' => 'cpasProfile.create', 'uses' => 'admin\CpasProfileController@create', 'middleware' => ['permission:cpasProfile-create']]);
+	Route::post('cpasProfile/create', ['as' => 'cpasProfile.store', 'uses' => 'admin\CpasProfileController@store', 'middleware' => ['permission:cpasProfile-create']]);
+	Route::get('cpasProfile/{id}', ['as' => 'cpasProfile.show', 'uses' => 'admin\CpasProfileController@show', 'middleware' => ['permission:cpasProfile-list']]);
+	Route::get('cpasProfile/{id}/edit', ['as' => 'cpasProfile.edit', 'uses' => 'admin\CpasProfileController@edit', 'middleware' => ['permission:cpasProfile-edit']]);
+	Route::patch('cpasProfile/{id}', ['as' => 'cpasProfile.update', 'uses' => 'admin\CpasProfileController@update', 'middleware' => ['permission:cpasProfile-edit']]);
+	Route::delete('cpasProfile/{id}', ['as' => 'cpasProfile.destroy', 'uses' => 'admin\CpasProfileController@destroy', 'middleware' => ['permission:cpasProfile-delete']]);
+	/////////organisation Charts organisationCharts
+	Route::get('organisationCharts', ['as' => 'organisationCharts.index', 'uses' => 'admin\OrganisationChartsController@index', 'middleware' => ['permission:organisationCharts-list|organisationCharts-create|organisationCharts-edit|organisationCharts-delete']]);
+	Route::get('organisationCharts/create', ['as' => 'organisationCharts.create', 'uses' => 'admin\OrganisationChartsController@create', 'middleware' => ['permission:organisationCharts-create']]);
+	Route::post('organisationCharts/create', ['as' => 'organisationCharts.store', 'uses' => 'admin\OrganisationChartsController@store', 'middleware' => ['permission:organisationCharts-create']]);
+	Route::get('organisationCharts/{id}', ['as' => 'organisationCharts.show', 'uses' => 'admin\OrganisationChartsController@show', 'middleware' => ['permission:organisationCharts-list']]);
+	Route::get('organisationCharts/{id}/edit', ['as' => 'organisationCharts.edit', 'uses' => 'admin\OrganisationChartsController@edit', 'middleware' => ['permission:organisationCharts-edit']]);
+	Route::patch('organisationCharts/{id}', ['as' => 'organisationCharts.update', 'uses' => 'admin\OrganisationChartsController@update', 'middleware' => ['permission:organisationCharts-edit']]);
+	Route::delete('organisationCharts/{id}', ['as' => 'organisationCharts.destroy', 'uses' => 'admin\OrganisationChartsController@destroy', 'middleware' => ['permission:organisationCharts-delete']]);
+	/////////organisation Charts organisationCharts
+	Route::get('seniors', ['as' => 'seniors.index', 'uses' => 'admin\SeniorsController@index', 'middleware' => ['permission:seniors-list|seniors-create|seniors-edit|seniors-delete']]);
+	Route::get('seniors/create', ['as' => 'seniors.create', 'uses' => 'admin\SeniorsController@create', 'middleware' => ['permission:seniors-create']]);
+	Route::post('seniors/create', ['as' => 'seniors.store', 'uses' => 'admin\SeniorsController@store', 'middleware' => ['permission:seniors-create']]);
+	Route::get('seniors/{id}', ['as' => 'seniors.show', 'uses' => 'admin\SeniorsController@show', 'middleware' => ['permission:seniors-list']]);
+	Route::get('seniors/{id}/edit', ['as' => 'seniors.edit', 'uses' => 'admin\SeniorsController@edit', 'middleware' => ['permission:seniors-edit']]);
+	Route::patch('seniors/{id}', ['as' => 'seniors.update', 'uses' => 'admin\SeniorsController@update', 'middleware' => ['permission:seniors-edit']]);
+	Route::delete('seniors/{id}', ['as' => 'seniors.destroy', 'uses' => 'admin\SeniorsController@destroy', 'middleware' => ['permission:seniors-delete']]);
+	/////////clients Types
+	Route::get('clientsTypes', ['as' => 'clientsTypes.index', 'uses' => 'admin\ClientsTypesController@index', 'middleware' => ['permission:clientsTypes-list|clientsTypes-create|clientsTypes-edit|clientsTypes-delete']]);
+	Route::get('clientsTypes/create', ['as' => 'clientsTypes.create', 'uses' => 'admin\ClientsTypesController@create', 'middleware' => ['permission:clientsTypes-create']]);
+	Route::post('clientsTypes/create', ['as' => 'clientsTypes.store', 'uses' => 'admin\ClientsTypesController@store', 'middleware' => ['permission:clientsTypes-create']]);
+	Route::get('clientsTypes/{id}', ['as' => 'clientsTypes.show', 'uses' => 'admin\ClientsTypesController@show', 'middleware' => ['permission:clientsTypes-list']]);
+	Route::get('clientsTypes/{id}/edit', ['as' => 'clientsTypes.edit', 'uses' => 'admin\ClientsTypesController@edit', 'middleware' => ['permission:clientsTypes-edit']]);
+	Route::patch('clientsTypes/{id}', ['as' => 'clientsTypes.update', 'uses' => 'admin\ClientsTypesController@update', 'middleware' => ['permission:clientsTypes-edit']]);
+	Route::delete('clientsTypes/{id}', ['as' => 'clientsTypes.destroy', 'uses' => 'admin\ClientsTypesController@destroy', 'middleware' => ['permission:clientsTypes-delete']]);
+	/////////clients
+	Route::get('clients', ['as' => 'clients.index', 'uses' => 'admin\ClientsController@index', 'middleware' => ['permission:clients-list|clients-create|clients-edit|clients-delete']]);
+	Route::get('clients/create', ['as' => 'clients.create', 'uses' => 'admin\ClientsController@create', 'middleware' => ['permission:clients-create']]);
+	Route::post('clients/create', ['as' => 'clients.store', 'uses' => 'admin\ClientsController@store', 'middleware' => ['permission:clients-create']]);
+	Route::get('clients/{id}', ['as' => 'clients.show', 'uses' => 'admin\ClientsController@show', 'middleware' => ['permission:clients-list']]);
+	Route::get('clients/{id}/edit', ['as' => 'clients.edit', 'uses' => 'admin\ClientsController@edit', 'middleware' => ['permission:clients-edit']]);
+	Route::patch('clients/{id}', ['as' => 'clients.update', 'uses' => 'admin\ClientsController@update', 'middleware' => ['permission:clients-edit']]);
+	Route::delete('clients/{id}', ['as' => 'clients.destroy', 'uses' => 'admin\ClientsController@destroy', 'middleware' => ['permission:clients-delete']]);
+	/////////Certifications Type
+	Route::get('certificationType', ['as' => 'certificationType.index', 'uses' => 'admin\CertificationTypeController@index', 'middleware' => ['permission:certificationType-list|certificationType-create|certificationType-edit|certificationType-delete']]);
+	Route::get('certificationType/create', ['as' => 'certificationType.create', 'uses' => 'admin\CertificationTypeController@create', 'middleware' => ['permission:certificationType-create']]);
+	Route::post('certificationType/create', ['as' => 'certificationType.store', 'uses' => 'admin\CertificationTypeController@store', 'middleware' => ['permission:certificationType-create']]);
+	Route::get('certificationType/{id}', ['as' => 'certificationType.show', 'uses' => 'admin\CertificationTypeController@show', 'middleware' => ['permission:certificationType-list']]);
+	Route::get('certificationType/{id}/edit', ['as' => 'certificationType.edit', 'uses' => 'admin\CertificationTypeController@edit', 'middleware' => ['permission:certificationType-edit']]);
+	Route::patch('certificationType/{id}', ['as' => 'certificationType.update', 'uses' => 'admin\CertificationTypeController@update', 'middleware' => ['permission:certificationType-edit']]);
+	Route::delete('certificationType/{id}', ['as' => 'certificationType.destroy', 'uses' => 'admin\CertificationTypeController@destroy', 'middleware' => ['permission:certificationType-delete']]);
+	/////////Certifications
+	Route::get('certifications', ['as' => 'certifications.index', 'uses' => 'admin\CertificationsController@index', 'middleware' => ['permission:certifications-list|certifications-create|certifications-edit|certifications-delete']]);
+	Route::get('certifications/create', ['as' => 'certifications.create', 'uses' => 'admin\CertificationsController@create', 'middleware' => ['permission:certifications-create']]);
+	Route::post('certifications/create', ['as' => 'certifications.store', 'uses' => 'admin\CertificationsController@store', 'middleware' => ['permission:certifications-create']]);
+	Route::get('certifications/{id}', ['as' => 'certifications.show', 'uses' => 'admin\CertificationsController@show', 'middleware' => ['permission:certifications-list']]);
+	Route::get('certifications/{id}/edit', ['as' => 'certifications.edit', 'uses' => 'admin\CertificationsController@edit', 'middleware' => ['permission:certifications-edit']]);
+	Route::patch('certifications/{id}', ['as' => 'certifications.update', 'uses' => 'admin\CertificationsController@update', 'middleware' => ['permission:certifications-edit']]);
+	Route::delete('certifications/{id}', ['as' => 'certifications.destroy', 'uses' => 'admin\CertificationsController@destroy', 'middleware' => ['permission:certifications-delete']]);
 	/////////alambnaaa ///////////
 	Route::get('alambnaaa', ['as' => 'alambnaaa.index', 'uses' => 'admin\AlambnaaaController@index', 'middleware' => ['permission:alambnaaa-list|alambnaaa-create|alambnaaa-edit|alambnaaa-delete']]);
 	Route::get('alambnaaa/create', ['as' => 'alambnaaa.create', 'uses' => 'admin\AlambnaaaController@create', 'middleware' => ['permission:alambnaaa-create']]);

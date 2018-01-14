@@ -28,7 +28,7 @@ class Projects extends Model
     public function ProjectsImages() {
         return $this->hasMany("App\Models\ProjectsImages");
     }
-    public function ProjectsCategory() {
+    public function projectsCategory() {
         return $this->belongsTo('App\Models\ProjectsCategory' , 'projects_category_id');
     }
 

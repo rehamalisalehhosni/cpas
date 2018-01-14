@@ -39,9 +39,17 @@
             <li><a href="{{ route('services.index') }}" class=""><i class="lnr lnr-cog"></i> <span>Services</span></a></li>
             <li><a href="{{ route('projectCategory.index') }}" class=""><i class="lnr lnr-cog"></i> <span>project Category</span></a></li>
             <li><a href="{{ route('projects.index') }}" class=""><i class="lnr lnr-cog"></i> <span>Projects</span></a></li>
+            <li><a href="{{ route('clientsTypes.index') }}" class=""><i class="lnr lnr-cog"></i> <span>Clients Types</span></a></li>
+            <li><a href="{{ route('clients.index') }}" class=""><i class="lnr lnr-cog"></i> <span>Clients</span></a></li>
+            <li><a href="{{ route('certificationType.index') }}" class=""><i class="lnr lnr-cog"></i> <span>certification Types</span></a></li>
+            <li><a href="{{ route('certifications.index') }}" class=""><i class="lnr lnr-cog"></i> <span>Certifications</span></a></li>
             <li><a href="{{ route('cpasBooks.index') }}" class=""><i class="lnr lnr-cog"></i> <span>CPAS Books</span></a></li>
+            <li><a href="{{ route('cpasProfile.index') }}" class=""><i class="lnr lnr-cog"></i> <span>CPAS Profile</span></a></li>
+            <li><a href="{{ route('organisationCharts.index') }}" class=""><i class="lnr lnr-cog"></i> <span>Organisation Charts</span></a></li>
+            <li><a href="{{ route('seniors.index') }}" class=""><i class="lnr lnr-cog"></i> <span>Seniors</span></a></li>
             <li><a href="{{ route('alambnaaa.index') }}" class=""><i class="lnr lnr-cog"></i> <span>Alambnaaa</span></a></li>
             <li><a href="{{ route('alambnaaaIndexing.index') }}" class=""><i class="lnr lnr-cog"></i> <span>Alambnaaa Indexing</span></a></li>
+            <li><a href="{{ route('seniors.index') }}" class=""><i class="lnr lnr-cog"></i> <span>Seniors</span></a></li>
             <li><a href="notifications.html" class=""><i class="lnr lnr-alarm"></i> <span>Notifications</span></a></li>
             <li>
               <a href="#subPages" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>Pages</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
